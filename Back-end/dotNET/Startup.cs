@@ -58,7 +58,7 @@ public class Startup // 애플리케이션의 초기 설정 및 구성을 담당
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
-            endpoints.MapHub<SignalRHub>("/droneHub");
+            endpoints.MapHub<SignalRHub>("/Hub");
         });
     }
 }

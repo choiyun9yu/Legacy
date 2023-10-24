@@ -13,6 +13,7 @@
 
        ProejctRoot/
         │
+        ├── appsettings.json            // 애플리케이션의 구성 정보 설정 파일
         ├── ProjectName.csproj          // 프로젝트 환경 설정 파일
         ├── Controllers/                // 클라이언트 요청을 처리하고 응답을 생용성, 엔드포인트
         │   ├── ...
@@ -21,7 +22,7 @@
         ├── Services/                   // Model과 Controller의 중간, 비즈니스 로직 및 데이터 접근 처
         │   ├── ...
         ├── Hubs/                  
-        │   ├── SignalRHub.cs           // SignalR 사용하기 위한 모듈 
+        │   ├── SignalRHub.cs           // SignalR 사용하기 위한 모듈
         ├── Startup.cs                  // 애플리케이션 구성 및 미들웨어 설정
         └── Program.cs                  // main 메소드 정의
 

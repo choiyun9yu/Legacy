@@ -72,7 +72,7 @@
     'rest_framework',   # 장고를 DRF로 사용하기 위해 추가
     ]
 
-    # mongodb 데이터베이스 연결을 아직 성공 못함
+    # mongodb 데이터베이스 연결을 아직 성공 못함, Djagno는 NoSQL과 호환이 좋은 편은 아닌듯, NoSQL을 메인으로 쓰려면 Flask 또는 fastAPI를 쓰는게 좋아보임
     DATABASES = {
         'default': {
             'ENGINE': 'djongo',

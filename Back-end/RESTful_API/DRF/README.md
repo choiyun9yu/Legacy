@@ -28,6 +28,22 @@
 
 ### 1-2. 프로젝트 생성
 
+#### Poetry 사용
+    % poetry init                   // pyproject.toml 파일 생성
+        Package name: {패키지명}
+        Version: {이 프로젝트의 버전}
+        Description: {설명}
+        Author: {작성자}
+        License: {라이센스}
+        Compatible Python versions: >=3.9
+        Package to add or search for: django, djangorestframework
+
+    % poetry shell                  // Poetry 쉘 활성화
+    % exit                          // Poetry 쉘 비활성화
+
+    % python manage.py runserver ip:8000  // 개발 서버 실행
+
+#### Pyenv 사용
     % mkdir proejct-name                
     % cd project-name           
 
@@ -35,15 +51,17 @@
     % pyenv virtualenv 3.9.11 proejct-name  # venv라는 가상 환경 생성
     % pyenv local proejct-name              # venv 가상 환경 적용
 
-    % pip install django==4.0 djangorestframework==3.13.1  
+    % pip install django==4.0 djangorestframework==3.13.1
 
-    % django-admin startproject proejct-name # 프로젝트 생성  
+### 1-2. 프로젝트 생성 
+
+    % django-admin startproject project-name # 프로젝트 생성  
     % python mange.py runserver              # 프로젝트 실행
 
     % django-admin runserver {ip:port}      # 개발 서버(디버깅 모드, 기본 포트 8000)
     % python manage.py runserver {ip:port}
 
-### 1-2. 앱 생성
+### 1-3. 앱 생성 및 설정
 
     % python manage.py startapp app-name    # 앱 생성
 
@@ -52,10 +70,21 @@
      ...
     'app-name'
     'rest_framework',   # 장고를 DRF로 사용하기 위해 추가
-
     ]
 
-### 1-3. 모델 생성
+    # mongodb 데이터베이스 연결을 아직 성공 못함
+    DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'my_mongodb_database_name',
+        }
+    }
+
+    TIME_ZONE = 'Asia/Seoul'
+
+    DEBUG = True
+
+### 1-5. 모델 생성
 
 #### projectName/appName/models.py
 
@@ -72,3 +101,13 @@
     % python manage.py makemigrations
     % python manage.py migrate
     % python manage.py loaddata test_data.json
+
+
+<br>
+<br>
+
+## 2. 어플리케이션 개발
+
+### 2-1. urls 작성
+
+### 2-2. views 작성

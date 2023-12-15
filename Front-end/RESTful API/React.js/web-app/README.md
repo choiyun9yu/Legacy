@@ -13,7 +13,7 @@
     % yarn add tailwindcss
     % npx tailwindcss init
 
-    # tailwind.config.js
+#### tailwind.config.js
     module.exports = {
         // 템플릿 파일의 경로 설정 👀
         purge:[ './src/**/*.{js,jsx,ts,tsx}' ],
@@ -25,6 +25,11 @@
         },
         plugins: [],
     }
+
+#### index.css
+    @import 'tailwindcss/base';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
 
 ### 1-2. framer-motion
 
